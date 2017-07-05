@@ -1,9 +1,58 @@
+
+
+<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title></title>
-    </head>
-    <body>
-        
-    </body>
+<head id="Head1"><title>
+	Learning Management System - Virtual University of Pakistan
+</title><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+
+   <script language="javascript" type="text/javascript">
+       function CheckPageRequest()
+       {
+            var url = self.location.href
+            
+            if (url.indexOf("NoticeBoard2") != -1)
+            {            
+                document.getElementById("frmNoticeBoard").src = url.substring(url.indexOf("body=")+5);            
+            }
+            
+            if (self.location.href.indexOf("ImportantLinks") != -1)
+            {            
+                document.getElementById("frmNoticeBoard").src = url.substring(url.indexOf("body=")+5);
+            }
+       }
+   </script>
+   
+    <script type="text/javascript">
+        //Google Analytics Code - Start
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-27570524-1', 'auto');
+        ga('send', 'pageview');
+        //Google Analytics Code - End
+    </script>
+<link href="App_Themes/Default/ftbStyles.css" type="text/css" rel="stylesheet" /><link href="App_Themes/Default/IconFont/iconsFont.css" type="text/css" rel="stylesheet" /><link href="App_Themes/Default/jqModal/jqModal.css" type="text/css" rel="stylesheet" /><link href="App_Themes/Default/JQuery/jquery-ui.css" type="text/css" rel="stylesheet" /><link href="App_Themes/Default/vulms.css" type="text/css" rel="stylesheet" /></head>
+
+<div id="divFrames" style="width:885px;">
+    <frameset framespacing="0" border="0" id="frameHolderLogin" frameborder="0" rows="70,*" onactivate="CheckPageRequest();">
+        <frame name="frameHeader" id="fheader" title="header" scrolling="no" noresize="noresize"
+            marginwidth="0" marginheight="0" src="LMS_Header.aspx?id=6ce542c5-9190-49ab-931e-50e793fe41a2">
+        </frame>        
+        <frame id="frmNoticeBoard" name="frmNoticeBoard" noresize marginwidth="0" marginheight="0" scrolling="auto"
+            accesskey="default" src="LMS_LandingPage.aspx?id=05b5df17-0fd2-465a-bcc2-56df2df60fb9">
+        </frame>        
+        <noframes>
+            <body bgcolor="#3333cc">
+                <p>
+                    This page uses frames, but your browser doesn't support them.</p>
+            </body>
+        </noframes>
+    </frameset>
+</div>
+
 </html>
